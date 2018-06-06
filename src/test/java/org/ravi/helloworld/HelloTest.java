@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -19,8 +19,8 @@ public class HelloTest {
 	@BeforeTest
 	public void beforeTest() {
 		
-		System.setProperty("webdriver.chrome.driver","resources\\chromedriver.exe");
-		driver = new ChromeDriver();
+		System.setProperty("webdriver.firefox.driver","resources\\firefoxdriver.exe");
+		driver = new firefoxDriver();
 		driver.get("http://demoaut.com");
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 		
